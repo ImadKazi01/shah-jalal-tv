@@ -191,7 +191,7 @@ onMounted(() => {
     width: 100%;
     height: auto;
     border-collapse: collapse;
-    background: #2d9159;
+    background: #288f37;
     color: white;
 
     thead {

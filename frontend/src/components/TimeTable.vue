@@ -206,7 +206,7 @@ onMounted(() => {
     tbody {
       tr {
         td {
-          font-size: 2.4rem;
+          font-size: 2.7rem;
           text-align: center;
         }
 

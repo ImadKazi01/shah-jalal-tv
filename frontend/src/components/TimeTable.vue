@@ -184,7 +184,7 @@ onMounted(() => {
 <style lang="scss" scoped>
 .timetable-container {
   display: flex;
-  width: 40%;
+  width: 45%;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 
   table {
@@ -198,7 +198,7 @@ onMounted(() => {
       tr {
         th {
           font-size: 1.8rem;
-          padding-top: 2rem;
+          padding: 2rem 0.5rem;
         }
       }
     }
@@ -206,12 +206,12 @@ onMounted(() => {
     tbody {
       tr {
         td {
-          font-size: 2.7rem;
+          font-size: 2.4rem;
           text-align: center;
         }
 
         &.jummah {
-          background-color: #ffad1f; /* Change the color as desired */
+          background-color: #e4960f; /* Change the color as desired */
         }
 
         .jamat-only {

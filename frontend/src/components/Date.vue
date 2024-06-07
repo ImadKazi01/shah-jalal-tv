@@ -46,7 +46,7 @@ onMounted(async () => {
         alt="Madni Jamia Masjid Logo"
         class="logo"
       />
-      <span>Madni Jamia Masjid</span>
+      <span>Shah Jalal Masjid</span>
     </div>
     <div class="date-time-container" v-if="date && hijri">
       <span class="date-time-container__time">{{ currentTime }}</span>
@@ -73,14 +73,14 @@ header {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   height: 150px; /* Set the header height to 10% of the viewport height */
   width: 100%;
-  background-color: #faf0e6;
+  background-color: #ebebeb;
 
   .date-time-container {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    width: 60%;
+    width: 55%;
     text-align: center;
     gap: 1rem;
     height: 100%; /* Make the date-time container fill the header height */
@@ -110,7 +110,7 @@ header {
 
   .logo-container {
     display: flex;
-    width: 40%;
+    width: 45%;
     justify-content: center;
     align-items: center;
     gap: 2rem;
@@ -118,7 +118,7 @@ header {
 
     img {
       width: 100%;
-      max-width: 120px;
+      max-width: 70px;
       height: auto;
     }
 

@@ -133,7 +133,7 @@ header {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    width: 60%;
+    width: 55%;
     padding: 0 2rem;
     text-align: center;
     gap: 1rem;
@@ -141,7 +141,7 @@ header {
     border-left: solid 1px black;
 
     .skeleton-time {
-      width: 50%;
+      width: 45%;
       height: 4rem;
       background-color: #f0f0f0;
       animation: skeleton-loading 1.5s infinite;
@@ -151,11 +151,11 @@ header {
       display: flex;
       flex-direction: column;
       align-items: flex-end;
-      width: 50%;
+      width: 45%;
       gap: 1rem;
 
       .skeleton-date-item {
-        width: 80%;
+        width: 75%;
         height: 2.3rem;
         background-color: #f0f0f0;
         animation: skeleton-loading 1.5s infinite;

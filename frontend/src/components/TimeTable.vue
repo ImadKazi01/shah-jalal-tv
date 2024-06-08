@@ -70,7 +70,7 @@ function scheduleNextReload() {
       reloadTime.setDate(reloadTime.getDate() + 1); // If the reload time is earlier than the current time, set it to the next day
     }
 
-    reloadTime.setMinutes(reloadTime.getMinutes() + 5); // Add 5 minutes to the reload time
+    reloadTime.setMinutes(reloadTime.getMinutes() + 8); // Add 5 minutes to the reload time
     if (nextReloadTime === null || reloadTime < nextReloadTime) {
       nextReloadTime = reloadTime;
     }

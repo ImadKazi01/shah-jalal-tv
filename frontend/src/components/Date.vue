@@ -46,7 +46,10 @@ onMounted(async () => {
         alt="Madni Jamia Masjid Logo"
         class="logo"
       />
-      <span>Shah Jalal Masjid</span>
+      <div class="logo-container-inner">
+        <span>Shah Jalal</span>
+        <span class="logo-container-sub">Masjid</span>
+      </div>
     </div>
     <div class="date-time-container" v-if="date && hijri">
       <span class="date-time-container__time">{{ currentTime }}</span>
@@ -113,7 +116,7 @@ header {
     width: 45%;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 1.8rem;
     height: 100%;
 
     img {
@@ -122,9 +125,23 @@ header {
       height: auto;
     }
 
+    &-sub {
+      font-size: 1.9rem !important;
+      font-weight: normal;
+      color: #288f37;
+    }
+
     span {
       font-size: 2rem;
       font-weight: bold;
+      line-height: 1.1;
+    }
+
+    &-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-top: 1.1rem;
     }
   }
 
@@ -155,7 +172,7 @@ header {
       gap: 1rem;
 
       .skeleton-date-item {
-        width: 75%;
+        width: 50%;
         height: 2.3rem;
         background-color: #f0f0f0;
         animation: skeleton-loading 1.5s infinite;

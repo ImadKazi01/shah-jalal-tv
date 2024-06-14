@@ -1,7 +1,42 @@
 <script setup>
+import { onMounted } from "vue";
 import TimeTable from "./components/TimeTable.vue";
 import Date from "./components/Date.vue";
 import News from "./components/News.vue";
+
+const checkForReload = async () => {
+  try {
+    const response = await fetch("/reload-trigger.txt");
+    const timestamp = await response.text();
+    const storedTimestamp = localStorage.getItem("reloadTimestamp");
+
+    if (timestamp !== storedTimestamp) {
+      localStorage.setItem("reloadTimestamp", timestamp);
+      location.reload();
+    }
+  } catch (error) {
+    console.error("Failed to check for reload:", error);
+  }
+};
+
+onMounted(() => {
+  // Check if the current URL matches the reload trigger URL
+  if (window.location.pathname === "/") {
+    const fs = require("fs");
+    const path = require("path");
+    const reloadTriggerPath = path.join(
+      __dirname,
+      "..",
+      "public",
+      "reload-trigger.txt"
+    );
+    const timestamp = Date.now();
+    fs.writeFileSync(reloadTriggerPath, `timestamp: ${timestamp}`);
+  }
+
+  // Check for changes in the reload-trigger.txt file
+  checkForReload();
+});
 </script>
 
 <template>

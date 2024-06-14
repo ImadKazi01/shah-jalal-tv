@@ -22,16 +22,11 @@ const checkForReload = async () => {
 onMounted(() => {
   // Check if the current URL matches the reload trigger URL
   if (window.location.pathname === "/") {
-    const fs = require("fs");
-    const path = require("path");
-    const reloadTriggerPath = path.join(
-      __dirname,
-      "..",
-      "public",
-      "reload-trigger.txt"
-    );
-    const timestamp = Date.now();
-    fs.writeFileSync(reloadTriggerPath, `timestamp: ${timestamp}`);
+    const timestamp = new window.Date();
+    fetch("/reload-trigger.txt", {
+      method: "PUT",
+      body: `timestamp: ${timestamp}`,
+    });
   }
 
   // Check for changes in the reload-trigger.txt file
